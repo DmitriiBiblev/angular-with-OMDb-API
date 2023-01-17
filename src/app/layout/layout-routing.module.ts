@@ -6,6 +6,21 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'movies',
+        pathMatch: 'full',
+      },
+      {
+        path: 'movies',
+        loadChildren: () => import('../movies/movies.module').then(m => m.MoviesModule),
+      },
+      {
+        path: 'movie',
+        loadChildren: () => import('../movie-details/movie-details.module').then(m => m.MovieDetailsModule),
+      },
+    ],
   },
 ];
 
