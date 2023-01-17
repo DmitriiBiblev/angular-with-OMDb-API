@@ -17,6 +17,9 @@ import { LayoutComponent, MoviesListComponent, SearchComponent } from './compone
     CommonModule,
     MoviesRoutingModule,
   ],
+  exports: [
+    MoviesListComponent,
+  ],
 })
 export class MoviesModule {
 }
