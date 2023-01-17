@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-movie-details-container',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     <app-movies-details></app-movies-details>
   `,
   styleUrls: ['./movie-details-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MovieDetailsContainerComponent {
 
