@@ -1,0 +1,8 @@
+$icons: 'dark-theme', 'light-theme', 'default-theme', 'search';
+
+@each $icon in $icons {
+  .icon-#{$icon} {
+    font-size: 2.4rem;
+    display: inline-block;
+  }
+}

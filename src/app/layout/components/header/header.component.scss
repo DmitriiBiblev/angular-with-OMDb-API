@@ -1,0 +1,23 @@
+:host {
+  background: var(--background-color);
+  border-bottom: .2rem solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.header {
+  width: 100%;
+  max-width: var(--max-width);
+  height: 7rem;
+  padding: 0 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    font-family: var(--font-family);
+    color: var(--text-color);
+  }
+}

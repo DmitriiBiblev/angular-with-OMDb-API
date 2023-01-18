@@ -1,0 +1,38 @@
+@mixin light-theme {
+  --text-color: #28064f;
+  --text-color-second: #c4d8df;
+  --background-color: #c4d8df;
+  --background-color-second: #3b1746;
+  --border-color: #28064f;
+
+  color-scheme: ligth;
+}
+
+@mixin dark-theme {
+  --text-color: #c4d8df;
+  --text-color-second: #28064f;
+  --background-color: #28064f;
+  --background-color-second: #9658ab;
+  --border-color: #c4d8df;
+
+  color-scheme: dark;
+}
+
+.light {
+  @include light-theme;
+}
+
+.dark {
+  @include dark-theme;
+}
+
+// OS Theme.
+:root:not(.light):not(.dark) {
+  @media (prefers-color-scheme: light) {
+    @include light-theme;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme;
+  }
+}
