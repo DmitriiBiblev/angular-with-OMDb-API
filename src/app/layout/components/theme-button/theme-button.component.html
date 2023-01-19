@@ -1,0 +1,18 @@
+<div class='theme-changer__wrapper' (clickOutside)='isOpened = false'>
+  <button class='theme-changer' (click)='switchThemeChanger()'>
+    <i class='icon-{{currentThemeName}}-theme'></i>
+    Theme
+  </button>
+  <ul *ngIf='isOpened' class='themes-list' @dropdown>
+    <li *ngFor='let theme of themes'>
+      <button
+        (click)='changeTheme(theme.type)'
+        class='themes-list__theme'
+        [class.active]='currentThemeName === theme.type'
+      >
+        <i class='icon-{{theme.type}}-theme'></i>
+        {{theme.text}}
+      </button>
+    </li>
+  </ul>
+</div>
