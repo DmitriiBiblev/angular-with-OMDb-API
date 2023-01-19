@@ -2,7 +2,6 @@
 @import "styles/reset";
 @import "styles/themes";
 @import "styles/icomoon";
-@import "styles/icons";
 
 :root {
   --max-width: 110rem;
@@ -11,4 +10,9 @@
 
 body {
   background-color: var(--background-color);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-size: 2.4rem;
+  display: inline-block;
 }

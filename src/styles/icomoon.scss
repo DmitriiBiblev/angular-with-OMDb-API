@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/assets/icomoon/icomoon.eot?d80871');
-  src:  url('/assets/icomoon/icomoon.eot?d80871#iefix') format('embedded-opentype'),
-    url('/assets/icomoon/icomoon.ttf?d80871') format('truetype'),
-    url('/assets/icomoon/icomoon.woff?d80871') format('woff'),
-    url('/assets/icomoon/icomoon.svg?d80871#icomoon') format('svg');
+  src:  url('/assets/icomoon/icomoon.eot?dn4afv');
+  src:  url('/assets/icomoon/icomoon.eot?dn4afv#iefix') format('embedded-opentype'),
+  url('/assets/icomoon/icomoon.ttf?dn4afv') format('truetype'),
+  url('/assets/icomoon/icomoon.woff?dn4afv') format('woff'),
+  url('/assets/icomoon/icomoon.svg?dn4afv#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change icomoon */
+  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-github:before {
+  content: "\e904";
+}
 .icon-dark-theme:before {
   content: "\e900";
 }
