@@ -1,6 +1,8 @@
 :host {
   width: 100vw;
   height: 100vh;
+  font-family: var(--font-family);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,15 +10,11 @@
 }
 
 .title {
-  font-family: var(--font-family);
-  color: var(--text-color);
   font-size: 20rem;
 }
 
 .link {
-  font-family: var(--font-family);
   font-size: 2.4rem;
-  color: var(--text-color);
   padding: .8rem 1.6rem;
   border: .1rem solid var(--border-color);
   border-radius: .4rem;
