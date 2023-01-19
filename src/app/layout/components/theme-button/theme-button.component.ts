@@ -20,9 +20,6 @@ import { animate, style, transition, trigger } from '@angular/animations';
       ]),
     ]),
   ],
-  host: {
-    '(clickOutside)': 'isOpened = false',
-  },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ThemeButtonComponent implements OnInit {
