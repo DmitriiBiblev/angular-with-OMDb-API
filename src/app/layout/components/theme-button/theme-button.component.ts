@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ITheme } from '../../interfaces';
 import { THEMES_DATA } from '../../data';
 import { animate, style, transition, trigger } from '@angular/animations';
@@ -20,6 +20,9 @@ import { animate, style, transition, trigger } from '@angular/animations';
       ]),
     ]),
   ],
+  host: {
+    '(clickOutside)': 'isOpened = false',
+  },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ThemeButtonComponent implements OnInit {
@@ -27,11 +30,6 @@ export class ThemeButtonComponent implements OnInit {
   htmlElement: HTMLHtmlElement = document.getElementsByTagName('html')[0];
   themes: ITheme[] = THEMES_DATA;
   isOpened: boolean = false;
-
-  constructor(
-    private elementRef: ElementRef<HTMLDivElement>,
-  ) {
-  }
 
   ngOnInit() {
     this.htmlElement.className = this.currentThemeName;
@@ -46,11 +44,5 @@ export class ThemeButtonComponent implements OnInit {
 
   switchThemeChanger() {
     this.isOpened = !this.isOpened;
-  }
-
-  @HostListener('document:click', ['$event.target'])
-  outsideClick(targetElement: Node | null) {
-    if (this.isOpened && !this.elementRef.nativeElement.contains(targetElement))
-      this.isOpened = false;
   }
 }
