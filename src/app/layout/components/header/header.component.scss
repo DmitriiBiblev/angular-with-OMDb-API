@@ -15,9 +15,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2.4rem;
 
   &__logo {
     font-family: var(--font-family);
     color: var(--text-color);
+    margin-right: auto;
   }
 }
